@@ -1,6 +1,7 @@
 import { defaultLocale } from '@/config/i18n'
 
 const messages = {
+  id: "Konten ini belum tersedia dalam bahasa anda"
   pt: 'Este conteúdo não está disponível em sua língua ainda',
   en: 'This content is not available in your language yet',
   es: 'Este contenido no está disponible en su idioma todavía',
@@ -25,7 +26,7 @@ export function DocNotAvailableInThisLanguage({ locale }: Props) {
   const message = messages?.[locale as Locales]
 
   return (
-    <div className="rounded-md border border-amber-600/50 bg-amber-800/70 p-4">
+    <div className="bg-amber-800/70 p-4 border border-amber-600/50 rounded-md">
       ⚠️ {message || messages[defaultLocale]}.
     </div>
   )
