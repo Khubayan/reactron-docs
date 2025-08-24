@@ -1,0 +1,153 @@
+---
+title: Terminologi
+description: Mengenal istilah Flex Container dan Flex Item pada Flexbox.
+---
+
+# Terminologi Flexbox
+
+Flexbox memiliki istilah inti yang wajib kamu kenal agar tidak bingung saat belajar tata letak modern di CSS. Mari kita bedah satu per satu dengan penjelasan visual dan contoh langsung!
+
+---
+
+## Flex Container
+
+**Flex Container** adalah elemen yang diberi properti `display: flex;`. Semua anak langsungnya otomatis menjadi **flex item** dan diatur tata letaknya menggunakan aturan Flexbox.
+
+> **Tips:** Hanya elemen **anak langsung (direct children)** yang menjadi flex item — cucu atau keturunan lebih dalam tidak otomatis diatur Flexbox.
+
+### Contoh Flex Container
+
+HTML
+
+```html
+<div class="container-box">
+  <!-- Flex items akan diletakkan di sini -->
+</div>
+```
+
+CSS
+
+```css
+.container-box {
+  display: flex;
+  background: #f9fafb;
+  height: 80px;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+```
+
+<div class="container-box"></div>
+
+## Flex Item
+
+Flex Item adalah elemen anak langsung dari Flex Container. Flexbox akan mengatur posisi, ukuran, dan jaraknya secara otomatis.
+
+HTML
+
+```html
+<div class="container-box">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+```
+
+CSS
+
+```css
+.container-box {
+  display: flex;
+  height: 80px;
+  background: #f9fafb;
+  gap: 2rem; /* mengatur jarak antar flex item */
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.box:first-child {
+  background: #fbcfe8;
+}
+
+.box:nth-child(2) {
+  background: #fef9c3;
+}
+
+.box:last-child {
+  background: #bbf7d0;
+}
+
+.box {
+  padding: 1rem;
+  border-radius: 8px;
+  color: #1f2937;
+}
+```
+
+<div class="container-box">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+---
+
+# Dua Axis Utama dalam Flexbox
+
+Flexbox mengatur _flex item_ dengan memanfaatkan dua sumbu utama:
+
+---
+
+<img
+  alt="flexbox model"
+  src="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox/flex_terms.png"
+/>
+
+## Main Axis (Sumbu Utama)
+
+- Sumbu tempat _flex item_ disusun.
+- **Default:** horizontal (`flex-direction: row`), bisa juga vertikal (`flex-direction: column`).
+- **Ujung awal:** `main start`, **ujung akhir:** `main end`.
+- **Panjang:** jarak dari `main start` ke `main end` disebut **main size**.
+
+---
+
+## Cross Axis (Sumbu Silang)
+
+- Sumbu tegak lurus _main axis_.
+- Jika _main axis_ **horizontal** → _cross axis_ **vertikal**, dan sebaliknya.
+- **Ujung awal:** `cross start`, **ujung akhir:** `cross end`.
+- **Panjang:** jarak dari `cross start` ke `cross end` disebut **cross size**.
+
+> **Tips:** Memahami main axis dan cross axis adalah kunci untuk menguasai properti Flexbox seperti `justify-content`, `align-items`, dan `align-self`.
+
+<style jsx>
+  {`
+    .container-box {
+      display: flex;
+      height: 80px;
+      background: #f9fafb;
+      gap: 2rem; /* mengatur jarak antar flex item */
+      padding: 0.5rem;
+      border-radius: 8px;
+    }
+
+    .box:first-child {
+      background: #fbcfe8;
+    }
+
+    .box:nth-child(2) {
+      background: #fef9c3;
+    }
+
+    .box:last-child {
+      background: #bbf7d0;
+    }
+
+    .box {
+      padding: 1rem;
+      border-radius: 8px;
+      color: #1f2937;
+    }
+  `}
+</style>

@@ -1,0 +1,472 @@
+---
+title: Flex Container
+description: memiliki beberapa properti yang dapat digunakan untuk mengatur layout child elements-nya. Berikut adalah beberapa properti yang dapat digunakan.
+---
+
+## Basis Kode
+
+Pada penjelasan ini, akan menggunakan kode berikut sebagai contoh dasar.
+
+HTML
+
+```html
+<div class="container-box">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+```
+
+CSS
+
+```css
+.container-box {
+  display: flex;
+  height: 80px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.box:first-child {
+  background: #fbcfe8;
+}
+
+.box:nth-child(2) {
+  background: #fef9c3;
+}
+
+.box:last-child {
+  background: #bbf7d0;
+}
+
+.box {
+  padding: 1rem;
+  border-radius: 8px;
+  color: #1f2937;
+}
+```
+
+Output
+
+<br />
+<div class="container-box">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+---
+
+## Gap
+
+Digunakan untuk memberikan ruang kosong (space) antar flex item tanpa menggunakan margin.
+
+CSS
+
+```css
+ .container-box {
+  display: flex;
+  ...
+  gap: 2rem;
+ }
+```
+
+Output
+
+<br />
+<div class="container-box gap-2">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+---
+
+## Justify Content Center
+
+Digunakan untuk meratakan flex items sesuai dengan arah main axis-nya. Ada beberapa nilai/value yang dapat digunakan.
+| **Values** | **Fungsi / Keterangan** |
+| ---------- | ----------------------------------------------------------------------------- |
+| `flex-start` | Merupakan nilai default jika tidak di spesifikasikan, berfungsi untuk mengatur perataan flex items dari main start . |
+|`flex-end` | Berfungsi untuk mengatur perataan flex items menurut posisi main end. |
+|`center` | Mengatur perataan flex items berada di tengah-tengah main axis-nya. |
+|`space-between` | Flex items dirapatkan ke ujung (main start dan main end), ruang kosong hanya di antara item (tanpa di tepi). |
+|`space-around` | Ruang kosong di kiri dan kanan setiap item sama, tapi tepi luar hanya separuh dari jarak antar item. |
+|`space-evenly`| Semua ruang kosong (antara item & tepi) benar-benar sama rata. |
+
+---
+
+### Flex Start
+
+CSS
+
+```css
+ .container-box {
+  display: flex;
+  ...
+  justify-content: flex-start;
+ }
+```
+
+Output
+
+<br />
+
+<div class="container-box flex-start">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+---
+
+### Flex End
+
+CSS
+
+```css
+ .container-box {
+  display: flex;
+  ...
+  justify-content: flex-end;
+ }
+```
+
+Output
+
+<br />
+
+<div class="container-box flex-end">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+### Center
+
+CSS
+
+```css
+ .container-box {
+  display: flex;
+  ...
+  justify-content: center;
+ }
+```
+
+Output
+
+<br />
+
+<div class="container-box flex-center">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+### Space Between
+
+CSS
+
+```css
+ .container-box {
+  display: flex;
+  ...
+  justify-content: space-between;
+ }
+```
+
+Output
+
+<br />
+
+<div class="container-box flex-between">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+### Space Around
+
+CSS
+
+```css
+ .container-box {
+  display: flex;
+  ...
+  justify-content: space-around;
+ }
+```
+
+Output
+
+<br />
+
+<div class="container-box flex-around">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+### Space Evenly
+
+CSS
+
+```css
+ .container-box {
+  display: flex;
+  ...
+  justify-content: space-evenly;
+ }
+```
+
+Output
+
+<br />
+
+<div class="container-box flex-evenly">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+## Align Items
+
+Digunakan untuk meratakan _flex items_ sesuai dengan arah _cross axis_-nya. Ada beberapa nilai/value yang dapat digunakan.
+| **Values** | **Fungsi / Keterangan** |
+| -------------- | ------------------------------------------------------------------------------- |
+| `stretch` | (_default_) Flex item akan meregang agar mengisi seluruh tinggi/lintasan _cross axis_. |
+| `flex-start` | Flex item diratakan sejajar pada awal _cross axis_ (atas jika _cross axis_ vertikal). |
+| `flex-end` | Flex item diratakan sejajar pada akhir _cross axis_ (bawah jika _cross axis_ vertikal). |
+| `center` | Flex item di tengah-tengah _cross axis_. |
+| `baseline` | Flex item diratakan menurut garis _baseline_ teks di dalamnya. |
+
+---
+
+### Stretch
+
+CSS
+
+```css
+ .container-box {
+  display: flex;
+  ...
+  height: 10rem;
+  align-items: stretch;
+ }
+```
+
+Output
+
+<br />
+
+<div class="container-box ic items-stretch">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+---
+
+### Flex Start
+
+CSS
+
+```css
+ .container-box {
+  display: flex;
+  ...
+  height: 10rem;
+  align-items: flex-start;
+ }
+```
+
+Output
+
+<br />
+
+<div class="container-box ic items-start">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+---
+
+### Flex End
+
+CSS
+
+```css
+ .container-box {
+  display: flex;
+  ...
+  height: 10rem;
+  align-items: flex-end;
+ }
+```
+
+Output
+
+<br />
+
+<div class="container-box ic items-end">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+---
+
+### Center
+
+CSS
+
+```css
+ .container-box {
+  display: flex;
+  ...
+  height: 10rem;
+  align-items: center;
+ }
+```
+
+Output
+
+<br />
+
+<div class="container-box ic items-center">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+---
+
+### Baseline
+
+CSS
+
+```css
+ .container-box {
+  display: flex;
+  ...
+  height: 10rem;
+  align-items: baseline;
+ }
+```
+
+Output
+
+<br />
+
+<div class="container-box ic items-baseline">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+## Kesimpulan
+
+Justify Content digunakan untuk mengatur perataan flex item menurut main axis-mya, sedangkan Align Items mengatur perataan menurut cross axis-nya.
+
+> **Tips:** Kedua properties tersebut dapat dikombinasikan untuk memposisikan flex item.
+
+CSS
+
+```css
+ .container-box {
+  display: flex;
+  ...
+  height: 10rem;
+  justify-content: center;
+  align-items: center;
+ }
+```
+
+Output
+
+<br />
+
+<div class="container-box ic items-center flex-center">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+<style jsx>
+  {`
+    .container-box {
+      display: flex;
+      height: 80px;
+      background: #f9fafb;
+      border-radius: 8px;
+    }
+
+    .ic {
+      height: 10rem;
+    }
+
+    .box:first-child {
+      background: #fbcfe8;
+    }
+
+    .box:nth-child(2) {
+      background: #fef9c3;
+    }
+
+    .box:last-child {
+      background: #bbf7d0;
+    }
+
+    .box {
+      padding: 1rem;
+      border-radius: 8px;
+      color: #1f2937;
+    }
+
+    .gap-2 {
+      gap: 2rem;
+    }
+
+    .flex-start {
+      justify-content: flex-start;
+    }
+
+    .flex-end {
+      justify-content: flex-end;
+    }
+
+    .flex-center {
+      justify-content: center;
+    }
+    .flex-between {
+      justify-content: space-between;
+    }
+
+    .flex-around {
+      justify-content: space-around;
+    }
+
+    .flex-evenly {
+      justify-content: space-evenly;
+    }
+
+    items-stretch {
+      align-items: stretch;
+    }
+
+    items-start {
+      align-items: flex-start;
+    }
+
+    items-end {
+      align-items: flex-end;
+    }
+    items-center {
+      align-items: center;
+    }
+
+    items-baseline {
+      align-items: baseline;
+    }
+  `}
+</style>

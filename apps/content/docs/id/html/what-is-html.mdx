@@ -1,0 +1,86 @@
+---
+title: Apa itu HTML
+description: Add new documents to your documentation site and blog.
+---
+
+## Apa itu HTML?
+
+**HTML (HyperText Markup Language)** adalah bahasa dasar untuk membangun sebuah halaman web.  
+Dengan HTML, kita bisa "menandai" (markup) teks, gambar, audio, video, hingga elemen lain agar bisa ditampilkan di browser.
+
+HTML menggunakan **elemen** seperti:  
+`<head>`, `<title>`, `<body>`, `<header>`, `<footer>`, `<section>`, `<p>`, `<div>`, `<span>`, `<img>`, `<nav>`, `<video>`, `<ul>`, `<li>` dan masih banyak lagi.
+
+Setiap elemen ini ditulis dengan **tag** yang dibungkus oleh tanda `<` dan `>`.  
+Contoh:
+
+```html
+<p>Ini adalah sebuah paragraf</p>
+```
+
+## Struktur Dasar HTML5
+
+HTML5 memiliki struktur standar yang digunakan untuk membangun sebuah halaman web. Berikut adalah contoh **kode dasar HTML5**:
+
+```html
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contoh struktur dasar HTML5" />
+    <title>Belajar HTML5</title>
+  </head>
+  <body>
+    <header>
+      <h1>Selamat Datang di Website Saya</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#">Tentang</a></li>
+          <li><a href="#">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Artikel Utama</h2>
+        <p>Ini adalah contoh paragraf di dalam section.</p>
+      </section>
+
+      <article>
+        <h2>Artikel Lainnya</h2>
+        <p>Artikel ini berdiri sendiri sebagai konten mandiri.</p>
+      </article>
+    </main>
+
+    <aside>
+      <h3>Info Tambahan</h3>
+      <p>Ini adalah sidebar berisi informasi tambahan.</p>
+    </aside>
+
+    <footer>
+      <p>&copy; 2025 Website Saya</p>
+    </footer>
+  </body>
+</html>
+```
+
+| **Elemen**                  | **Fungsi / Keterangan**                                                          |
+| --------------------------- | -------------------------------------------------------------------------------- |
+| `<!DOCTYPE html>`           | Menandakan bahwa dokumen menggunakan standar **HTML5**.                          |
+| `<html lang="id">`          | Elemen root yang membungkus seluruh isi dokumen. `lang="id"` → bahasa Indonesia. |
+| `<head>`                    | Bagian metadata (tidak tampil di halaman).                                       |
+| `<meta charset="UTF-8">`    | Menentukan karakter encoding **UTF-8**.                                          |
+| `<meta name="viewport">`    | Membuat tampilan **responsif** di perangkat mobile.                              |
+| `<meta name="description">` | Deskripsi singkat halaman, berguna untuk **SEO**.                                |
+| `<title>`                   | Judul halaman yang tampil di **tab browser**.                                    |
+| `<body>`                    | Bagian utama yang berisi **konten halaman**.                                     |
+| `<header>`                  | Bagian kepala halaman, biasanya berisi **logo, judul, atau navigasi**.           |
+| `<nav>`                     | Navigasi utama, biasanya berupa **daftar tautan**.                               |
+| `<main>`                    | Konten utama dari halaman.                                                       |
+| `<section>`                 | Membagi konten menjadi **bagian-bagian tematis**.                                |
+| `<article>`                 | Konten mandiri yang bisa berdiri sendiri, misalnya **artikel blog**.             |
+| `<aside>`                   | Konten tambahan atau **sidebar**.                                                |
+| `<footer>`                  | Bagian kaki halaman, biasanya berisi **hak cipta atau link tambahan**.           |

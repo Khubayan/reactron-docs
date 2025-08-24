@@ -1,0 +1,81 @@
+{
+  "site": {
+    "heading": "Web Development Langkah demi Langkah",
+    "description": "Sumber pengetahuan lengkap untuk siswa dalam mempelajari web development. Berisi tutorial, contoh kode, proyek, dan referensi untuk mendukung pembelajaran.",
+    "announcement": "📢 Selamat Datang di Pusat Belajar Web!",
+    "changelog": "Pembaruan & Materi Baru",
+    "buttons": {
+      "get_started": "Mulai Belajar",
+      "toggle_menu": "Menu",
+      "toggle_language": "Bahasa",
+      "deploy_vercel": "Coba Proyek di Vercel"
+    },
+    "words": {
+      "menu": "Menu",
+      "docs": "Dokumen",
+      "blog": "Blog"
+    },
+    "featured_cards": {
+      "html": {
+        "description": "Pelajari dasar-dasar HTML untuk membuat struktur halaman web."
+      },
+      "css": {
+        "description": "Belajar CSS untuk mempercantik tampilan website dengan gaya modern."
+      },
+      "tailwind": {
+        "description": "Menguasai Tailwind CSS untuk styling cepat dan responsif."
+      },
+      "javascript": {
+        "description": "Memahami JavaScript untuk menambahkan interaktivitas pada website."
+      },
+      "more": {
+        "title": "dan masih banyak lagi!",
+        "description": "Materi tambahan seperti React, Next.js, proyek mini, tips & trik, dan referensi lain untuk mendukung pembelajaran siswa."
+      }
+    },
+    "footer": {
+      "created_by": "Dibuat oleh"
+    },
+    "search": {
+      "search": "Cari",
+      "no_results_found": "Tidak ada hasil ditemukan",
+      "search_documentation": "Cari dokumentasi",
+      "type_command_or_search": "Ketik perintah atau cari"
+    },
+    "themes": {
+      "theme": "Tema",
+      "dark": "Gelap",
+      "light": "Terang",
+      "system": "Sistem"
+    }
+  },
+  "docs": {
+    "on_this_page": "Pada halaman ini",
+    "edit_page_on_github": "Edit halaman ini di GitHub",
+    "start_discussion_on_github": "Mulai diskusi di GitHub",
+    "api_reference": "Referensi API",
+    "docs": "Dokumen",
+    "source": "Sumber",
+    "not_found": {
+      "description": "Dokumen yang Anda cari tidak ada.",
+      "title": "Dokumen tidak ditemukan"
+    }
+  },
+  "blog": {
+    "words": {
+      "posts": "Postingan",
+      "by": "oleh"
+    },
+    "cards": {
+      "min_read": "menit baca"
+    },
+    "buttons": {
+      "next": "Berikutnya",
+      "previous": "Sebelumnya",
+      "rss_feed": "Umpan RSS",
+      "read_more": "baca selengkapnya",
+      "go_to_next_page": "Ke halaman berikutnya",
+      "go_to_previous_page": "Ke halaman sebelumnya"
+    }
+  }
+}

@@ -15,6 +15,7 @@ export const docsConfig: DocsConfig = {
       href: '/docs',
 
       title: {
+        id: 'Dokumentasi',
         en: 'Documentation',
         pt: 'Documentação',
       },
@@ -24,6 +25,7 @@ export const docsConfig: DocsConfig = {
   sidebarNav: [
     {
       title: {
+        id: 'Langkah Awal',
         en: 'Getting Started',
         pt: 'Começando',
       },
@@ -33,6 +35,7 @@ export const docsConfig: DocsConfig = {
           href: '/docs',
 
           title: {
+            id: 'Pengenalan',
             en: 'Introduction',
             pt: 'Introdução',
           },
@@ -131,6 +134,48 @@ export const docsConfig: DocsConfig = {
             pt: 'Histórico de alterações',
           },
 
+          items: [],
+        },
+      ],
+    },
+    {
+      title: {
+        id: 'HTML',
+      },
+      items: [
+        {
+          href: '/docs/html/what-is-html',
+          title: {
+            id: 'Apa itu HTML',
+          },
+          items: [],
+        },
+        {
+          href: '/docs/html/flexbox',
+          title: {
+            id: 'Flexbox',
+          },
+          items: [],
+        },
+        {
+          href: '/docs/html/flexbox/terminology',
+          title: {
+            id: 'Terminologi',
+          },
+          items: [],
+        },
+        {
+          href: '/docs/html/flexbox/flex-container',
+          title: {
+            id: 'Flex Container',
+          },
+          items: [],
+        },
+        {
+          href: '/docs/html/flexbox/flex-direction',
+          title: {
+            id: 'Flex Direction',
+          },
           items: [],
         },
       ],

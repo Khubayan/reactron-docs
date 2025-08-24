@@ -1,0 +1,105 @@
+---
+title: Flexbox
+description: Add new documents to your documentation site and blog.
+---
+
+## Apa itu Flexbox?
+
+**Flexbox** (Flexible Box Layout) adalah modul CSS yang dirancang untuk membuat tata letak lebih fleksibel dan responsif.  
+Dengan Flexbox, kita bisa dengan mudah mengatur posisi, ukuran, dan distribusi elemen di dalam sebuah container tanpa perlu banyak menggunakan float atau positioning manual.
+
+---
+
+## Cara Mengaktifkan Flexbox
+
+Untuk menggunakan Flexbox, cukup tambahkan properti `display: flex;` pada sebuah container. Semua elemen anaknya (child elements) akan otomatis menjadi **flex items**.
+
+### Contoh Kode HTML
+
+```html
+<div class="container-box">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+```
+
+> **Tips:** Hanya elemen **anak langsung (direct children)** yang menjadi flex item — cucu atau keturunan lebih dalam tidak otomatis diatur Flexbox.
+
+```html
+<div class="container-box">
+  <div class="box">
+    <!-- ❌ <p> bukan direct children -->
+    <p>A</p>
+  </div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+```
+
+### Contoh Kode CSS
+
+```css
+.container-box {
+  display: flex;
+  background: #f9fafb;
+  gap: 2rem; /* mengatur jarak antar flex item */
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.box:first-child {
+  background: #fbcfe8;
+}
+
+.box:nth-child(2) {
+  background: #fef9c3;
+}
+
+.box:last-child {
+  background: #bbf7d0;
+}
+
+.box {
+  padding: 1rem;
+  border-radius: 8px;
+  color: #1f2937;
+}
+```
+
+### Ouput
+
+<br />
+<div class="container-box">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+<style jsx>{`
+  .container-box {
+    display: flex;
+    background: #f9fafb;
+    gap: 2rem; /* mengatur jarak antar flex item */
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+
+  .box:first-child {
+    background: #fbcfe8;
+  }
+
+  .box:nth-child(2) {
+    background: #fef9c3;
+  }
+
+  .box:last-child {
+    background: #bbf7d0;
+  }
+
+  .box {
+    padding: 1rem;
+    border-radius: 8px;
+    color: #1f2937;
+  }
+`}</style>

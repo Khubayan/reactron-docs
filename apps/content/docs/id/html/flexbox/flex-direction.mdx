@@ -1,0 +1,213 @@
+---
+title: Flex Direction
+description: Properti untuk menentukan arah utama (main axis) dari flex items di dalam flex container.
+---
+
+# Definisi
+
+Properti _flex-direction_ digunakan untuk menentukan arah utama (_main axis_) penataan _flex items_ di dalam _flex container_. Default-nya adalah horizontal (_row_), namun dapat diubah menjadi vertikal atau membalik arah.
+
+---
+
+## Basis Kode
+
+Pada penjelasan ini, digunakan contoh dasar berikut:
+
+HTML
+
+```html
+<div class="container-box">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+```
+
+CSS
+
+```css
+.container-box {
+  display: flex;
+  height: 10rem;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.box:first-child {
+  background: #fbcfe8;
+}
+
+.box:nth-child(2) {
+  background: #fef9c3;
+}
+
+.box:last-child {
+  background: #bbf7d0;
+}
+
+.box {
+  padding: 1rem;
+  border-radius: 8px;
+  color: #1f2937;
+}
+```
+
+Output:
+
+<br />
+<div class="container-box">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+---
+
+## Tabel Nilai _Flex Direction_
+
+| **Value**        | **Arah _Main Axis_ & Fungsi**                                                          |
+| ---------------- | -------------------------------------------------------------------------------------- |
+| `row`            | (_default_) _Flex items_ disusun dari kiri ke kanan (horizontal, _main axis_ ke kanan) |
+| `row-reverse`    | _Flex items_ disusun dari kanan ke kiri (_main axis_ dibalik, horizontal)              |
+| `column`         | _Flex items_ disusun dari atas ke bawah (vertikal, _main axis_ ke bawah)               |
+| `column-reverse` | _Flex items_ disusun dari bawah ke atas (_main axis_ dibalik, vertikal)                |
+
+---
+
+# _Row_ (Default)
+
+CSS
+
+```css
+.container-box {
+  display: flex;
+  flex-direction: row;
+}
+```
+
+Output
+
+<br />
+<div class="container-box flex-row">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+---
+
+# _Row Reverse_
+
+CSS
+
+```css
+.container-box {
+  display: flex;
+  flex-direction: row-reverse;
+}
+```
+
+Output
+
+<br />
+<div class="container-box flex-row-reverse">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+---
+
+_Column_
+
+CSS
+
+```css
+.container-box {
+  display: flex;
+  flex-direction: column;
+}
+```
+
+Output
+
+<br />
+<div class="container-box flex-col">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+---
+
+# _Column Reverse_
+
+CSS
+
+```css
+.container-box {
+  display: flex;
+  flex-direction: column-reverse;
+}
+```
+
+Output:
+
+<br />
+<div class="container-box flex-col-reverse">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
+</div>
+
+---
+
+<style jsx>
+  {`
+    .container-box {
+      display: flex;
+      height: 10rem;
+      background: #f9fafb;
+      border-radius: 8px;
+    }
+
+    .ic {
+      height: 10rem;
+    }
+
+    .box:first-child {
+      background: #fbcfe8;
+    }
+
+    .box:nth-child(2) {
+      background: #fef9c3;
+    }
+
+    .box:last-child {
+      background: #bbf7d0;
+    }
+
+    .box {
+      padding: 1rem;
+      border-radius: 8px;
+      color: #1f2937;
+    }
+
+    .gap-2 {
+      gap: 2rem;
+    }
+
+    .flex-row {
+      flex-direction: row;
+    }
+    .flex-row-reverse {
+      flex-direction: row-reverse;
+    }
+    .flex-col {
+      flex-direction: column;
+    }
+    .flex-col-reverse {
+      flex-direction: column-reverse;
+    }
+  `}
+</style>

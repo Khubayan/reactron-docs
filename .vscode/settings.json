@@ -48,4 +48,5 @@
     "javascript",
     "typescript"
   ],
+  "nuxt.isNuxtApp": false,
 }

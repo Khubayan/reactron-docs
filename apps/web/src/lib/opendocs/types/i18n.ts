@@ -7,4 +7,4 @@ export type LocalizedRecord = Partial<{
   [key in LocaleOptions]: string
 }>
 
-export type IntlMessages = typeof import('@/i18n/locales/en.json')
+export type IntlMessages = typeof import('@/i18n/locales/id.json')
